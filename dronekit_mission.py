@@ -276,7 +276,7 @@ while True:
     print('Distance to waypoint (%s): %s' % (nextwaypoint, distance_to_current_waypoint()))
     if nextwaypoint == 2:  # Skip to next waypoint
         print("#################################################")
-        print("Second waypoint reached, switching mode to GUIDED")
+        print("First waypoint reached, switching mode to GUIDED")
         print("#################################################")
         print("")
         vehicle.mode = VehicleMode("GUIDED")
@@ -320,7 +320,7 @@ print("")
 while True:
     nextwaypoint = vehicle.commands.next
     print('Distance to waypoint (%s): %s' % (nextwaypoint, distance_to_current_waypoint()))
-    if nextwaypoint == 4:  # Skip to next waypoint
+    if nextwaypoint == 3 && distance_to_current_waypoint() < 1:  # Skip to next waypoint
         print("#################################################")
         print("Third waypoint reached, switching mode to LAND")
         print("#################################################")
