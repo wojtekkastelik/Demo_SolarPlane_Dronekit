@@ -28,7 +28,7 @@ print('Connecting to vehicle on: %s' % connection_string)
 print("#################################################")
 print("")
 
-vehicle = connect(connection_string, wait_ready=True, baud=921600)
+vehicle = connect(connection_string, wait_ready=True, baud=57600)
 
 print("#################################################")
 print("Drone reached, switching mode to GUIDED")
