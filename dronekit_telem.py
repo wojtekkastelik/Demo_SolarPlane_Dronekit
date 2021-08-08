@@ -111,26 +111,14 @@ print("")
 print("#################################################")
 print("")
 
-print("#################################################")
-print("Arming motors")
-print("#################################################")
-print("")
-
-#vehicle.armed = True
 time.sleep(2)
 
 print("#################################################")
-print("Armed: %s" % vehicle.armed)
+print("RTL!")
 print("#################################################")
 print("")
 
-
-print("#################################################")
-print("Land!")
-print("#################################################")
-print("")
-
-vehicle.mode = VehicleMode("LAND")
+vehicle.mode = VehicleMode("RTL")
 time.sleep(1)
 
 print("#################################################")
@@ -138,13 +126,7 @@ print('Mode: %s' % vehicle.mode)
 print("#################################################")
 print("")
 
-
 time.sleep(2)
-
-print("#################################################")
-print("Disarming")
-print("#################################################")
-print("")
 
 # Upload mission from file
 import_mission_filename = 'test.waypoints'
@@ -153,11 +135,6 @@ upload_mission(import_mission_filename)
 # Disarm the vehicle
 #vehicle.armed = False
 time.sleep(2)
-# Print the armed state for the vehicle
-print("#################################################")
-print("Armed: %s" % vehicle.armed)
-print("#################################################")
-print("")
 
 # Close vehicle object before exiting script
 print("#################################################")

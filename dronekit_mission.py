@@ -322,10 +322,10 @@ while True:
     print('Distance to waypoint (%s): %s' % (nextwaypoint, distance_to_current_waypoint()))
     if nextwaypoint == 3 and distance_to_current_waypoint() < 1:  # Skip to next waypoint
         print("#################################################")
-        print("Third waypoint reached, switching mode to LAND")
+        print("Third waypoint reached, switching mode to RTL")
         print("#################################################")
         print("")
-        vehicle.mode = VehicleMode("LAND")
+        vehicle.mode = VehicleMode("RTL")
         break
     time.sleep(1)
 
