@@ -115,11 +115,11 @@ arm_and_takeoff(15)
 time.sleep(2)
 
 print("#################################################")
-print("Land!")
+print("RTL!")
 print("#################################################")
 print("")
 
-vehicle.mode = VehicleMode("LAND")
+vehicle.mode = VehicleMode("RTL")
 time.sleep(1)
 
 print("#################################################")
@@ -133,7 +133,7 @@ while True:
     if vehicle.location.global_relative_frame.alt <= 1 * 0.95:
         print("")
         print("#################################################")
-        print("Reached land")
+        print("Reached rtl")
         print("#################################################")
         print("")
         break

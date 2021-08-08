@@ -111,6 +111,7 @@ print("")
 print("#################################################")
 print("")
 
+#vehicle.armed = True
 time.sleep(2)
 
 print("#################################################")
@@ -135,6 +136,11 @@ upload_mission(import_mission_filename)
 # Disarm the vehicle
 #vehicle.armed = False
 time.sleep(2)
+# Print the armed state for the vehicle
+print("#################################################")
+print("Armed: %s" % vehicle.armed)
+print("#################################################")
+print("")
 
 # Close vehicle object before exiting script
 print("#################################################")
